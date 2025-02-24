@@ -81,10 +81,12 @@ Para probar el sistema de WebSockets y ver actualizaciones en tiempo real:
 3️⃣ **Envía un mensaje WebSocket manualmente**:
 Puedes usar una herramienta como Postman usando la petición que se observa en la parte inferior para actualizar la información.
 
-Petición para Agentes
+- Petición para Agentes
+
 ![Peticion de Agentes](./assets/Agentes.png)
 
-Petición para Clientes
+- Petición para Clientes
+
 ![Peticion de clientes](./assets/Clientes.png)
 
 Esto actualizará la información en todas las pestañas abiertas.
