@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📞 Contact Center - Web App
 
-## Getting Started
+## 📌 Descripción
+**Contact Center** es una aplicación desarrollada en **Next.js** que permite la gestión en tiempo real de agentes y clientes dentro de un centro de atención. La aplicación utiliza **WebSockets** para actualizar la información en vivo y cuenta con filtros dinámicos para mejorar la experiencia de usuario.
 
-First, run the development server:
+![Vista agentes](./assets/vistaAgentes.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Tecnologías utilizadas
+- **Next.js** (App Router, TypeScript, ESLint, Tailwind CSS, Turbopack)
+- **React** (con componentes reutilizables y estado optimizado)
+- **WebSockets** (para actualizaciones en tiempo real)
+- **Jest & React Testing Library** (para pruebas de los componentes)
+- **Preline UI + Tailwind CSS** (para una interfaz moderna y adaptable)
+
+---
+
+## 🔧 Instalación y ejecución
+
+### 1️⃣ **Clonar el repositorio**
+```sh
+  git clone https://github.com/tu-usuario/contact-center.git
+  cd contact-center
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ **Instalar dependencias**
+```sh
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3️⃣ **Configurar variables de entorno**
+Crea un archivo `.env.local` en la raíz del proyecto con los siguientes valores:
+```ini
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3001
+NEXT_PUBLIC_WS_URL=http://localhost:3001
+```
+Si el servidor de WebSockets está en otro puerto o dominio, cámbialo en esta variable.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4️⃣ **Ejecutar la aplicación**
+```sh
+npm run dev
+```
+La aplicación estará disponible en `http://localhost:3000`.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔥 Funcionalidades principales
+✅ **Listado de clientes y agentes en tiempo real**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ **Actualización automática mediante WebSockets**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✅ **Filtros dinámicos para buscar agentes y clientes**
 
-## Deploy on Vercel
+✅ **Diseño moderno con Tailwind CSS**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✅ **Pruebas automatizadas con Jest y React Testing Library**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌐 Vistas de la aplicación
+
+### 🏠 **Landing Page**
+📍 Presentación del proyecto y del desarrollador.
+
+### 👥 **Gestión de Clientes**
+📍 Listado de clientes en espera con detalles y filtros.
+
+### 🏢 **Gestión de Agentes**
+📍 Listado de agentes disponibles con estado en vivo.
+
+---
+
+## 🛠️ Cómo probar WebSockets en la aplicación
+Para probar el sistema de WebSockets y ver actualizaciones en tiempo real:
+
+1️⃣ **Inicia el servidor WebSocket** (si está en local, usa `http://localhost:3001`).
+
+2️⃣ **Abre la aplicación en dos pestañas diferentes** en `http://localhost:3000/agents` o `http://localhost:3000/customers`.
+
+3️⃣ **Envía un mensaje WebSocket manualmente**:
+Puedes usar una herramienta como Postman usando la petición que se observa en la parte inferior para actualizar la información.
+
+Petición para Agentes
+![Peticion de Agentes](./assets/Agentes.png)
+
+Petición para Clientes
+![Peticion de clientes](./assets/Clientes.png)
+
+Esto actualizará la información en todas las pestañas abiertas.
+
+---
+
+## 🧪 Ejecución de pruebas
+Para correr las pruebas de los componentes:
+```sh
+npm test
+```
+Esto ejecutará los test con **Jest y React Testing Library**.
+
+---
+
+## 👨‍💻 Desarrollador
+**Daniel Pérez**  
+📍 Estudiante de Ingeniería de Sistemas en la Universidad Nacional de Colombia.  
+💡 Apasionado por las competencias de programación y el uso de la tecnología para resolver problemas.
+
+---
+
+## 🎯 Mejoras futuras
+- ✅ Integración con una API de autenticación.
+- ✅ Implementación de métricas en tiempo real.
+- ✅ Optimización de rendimiento con carga diferida y caching.
+
+🚀 ¡Gracias por revisar este proyecto!
