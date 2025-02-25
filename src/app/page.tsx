@@ -1,3 +1,10 @@
+
+export const metadata = {
+  title: "📞 Contact Center",
+  description: "Página de inicio de la aplicación de Contact Center.",
+  icons: "/favicon-32x32.png",
+}
+
 export default function LandingPage() {
   return (
     <div className="h-full flex flex-col items-center p-4 bg-gray-100">
