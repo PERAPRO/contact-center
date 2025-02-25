@@ -20,7 +20,7 @@
 
 ### 1️⃣ **Clonar el repositorio**
 ```sh
-  git clone https://github.com/tu-usuario/contact-center.git
+  git clone https://github.com/tu-usuario/PERAPRO.git
   cd contact-center
 ```
 
@@ -74,11 +74,9 @@ La aplicación estará disponible en `http://localhost:3000`.
 ## 🛠️ Cómo probar WebSockets en la aplicación
 Para probar el sistema de WebSockets y ver actualizaciones en tiempo real:
 
-1️⃣ **Inicia el servidor WebSocket** (si está en local, usa `http://localhost:3001`).
+1️⃣ **Clonar el siguiente [repositorio](https://github.com/PERAPRO/sockets) y seguir las instrucciones** (si está en local, usa `http://localhost:3001`).
 
-2️⃣ **Abre la aplicación en dos pestañas diferentes** en `http://localhost:3000/agents` o `http://localhost:3000/customers`.
-
-3️⃣ **Envía un mensaje WebSocket manualmente**:
+2️⃣ **Envía un mensaje WebSocket manualmente**:
 Puedes usar una herramienta como Postman usando la petición que se observa en la parte inferior para actualizar la información.
 
 - Petición para Agentes
@@ -98,7 +96,7 @@ Para correr las pruebas de los componentes:
 ```sh
 npm test
 ```
-Esto ejecutará los test con **Jest y React Testing Library**.
+Esto ejecutará los test con **Jest y React Testing Library** (Pequeño problema con jsx, solo funciona con react-jsx).
 
 ---
 
