@@ -1,5 +1,3 @@
-"use client";
-
 import FilterSelect from "@/components/FilterSelect";
 
 const timeOptions = [

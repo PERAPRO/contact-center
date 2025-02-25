@@ -11,6 +11,8 @@ interface Agent {
 enum AgentStatus {
     Active = "active",
     Inactive = "inactive",
+    InCall = "in-call",
+    InBreak = "in-break",
 }
 
 export { AgentStatus };

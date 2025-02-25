@@ -8,6 +8,26 @@ import { Agent } from "@/types/agent";
 import { useSearchParams, useRouter } from "next/navigation";
 import useWebSocketData from "@/hooks/useWebSocketData";
 
+/**
+ * Component that renders a list of agents based on search parameters and filters.
+ *
+ * @returns {JSX.Element} The rendered component.
+ *
+ * @remarks
+ * This component uses WebSocket data to fetch and display a list of agents.
+ * It filters agents based on category and status search parameters.
+ * If no agents match the filters or if all agents are inactive, a message is displayed.
+ *
+ * @component
+ *
+ * @example
+ * ```tsx
+ * <AgentsList />
+ * ```
+ *
+ * @function
+ * @name AgentsList
+ */
 export default function AgentsList() {
   const matchFilters = (agent: Agent) => {
     const filters = Object.fromEntries(searchParams.entries());

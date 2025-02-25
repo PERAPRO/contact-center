@@ -1,27 +1,15 @@
+import { getStatusColor } from "@/app/constants/statusColor";
 import { Agent, AgentStatus } from "@/types/agent";
 import { useEffect, useState } from "react";
 
 /**
- * A functional component that displays an agent's information card.
- * 
+ * A React component that displays a agent's information in a card format.
+ * The card includes the agent's photo, name, country, position, and the elapsed time since the last update.
+ * The dot color of the card changes based on the agent's status.
+ *
  * @param {Object} props - The component props.
- * @param {Agent} props.agent - The agent object containing information to be displayed.
- * 
+ * @param {Agent} props.agent - The agent object containing the details to be displayed.
  * @returns {JSX.Element} The rendered agent card component.
- * 
- * @component
- * 
- * @example
- * const agent = {
- *   name: "John Doe",
- *   country: "USA",
- *   position: "Support Agent",
- *   profilePicture: "path/to/picture.jpg",
- *   lastUpdate: 1633036800000,
- *   status: AgentStatus.Active
- * };
- * 
- * <AgentCard agent={agent} />
  */
 export default function AgentCard({ agent }: { agent: Agent }) {
     const [elapsedTime, setElapsedTime] = useState("--:--:--");
@@ -45,7 +33,7 @@ export default function AgentCard({ agent }: { agent: Agent }) {
     return () => clearInterval(interval);
     }, [agent.lastUpdate]);
 
-    const statusColor = agent.status === AgentStatus.Active ? "bg-green-500" : "bg-red-500";
+    const statusColor = getStatusColor(agent.status);
 
     return (
     <div className="p-4 bg-white shadow-md rounded-lg flex flex-col items-center gap-2 border-2 border-gray-300">

@@ -2,7 +2,7 @@ import Filters from "./components/Filters";
 import CustomersList from './components/CustomersList';
 
 export const metadata = {
-  title: "Clientes en Espera",
+  title: "Clientes",
   description: "Página de clientes en espera del Contact Center.",
   icons: "/favicon-32x32.png",
 }
